@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Evil Twin Detection System
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+    <h1>
+        Evil Twin Detection System
+    </h1>
+
+</div>
+
+<div class="container">
+
+    <div class="main-title">
+
+        Behavior-Based WiFi Fingerprinting
+
+    </div>
+
+    <div class="subtitle">
+
+        Real-Time Cybersecurity Monitoring Dashboard
+
+    </div>
+
+    <div class="dashboard">
+
+        <div class="card">
+
+            <h2>WiFi Name</h2>
+
+            <p>{{ wifi_data.ssid }}</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>RSSI Signal</h2>
+
+            <p>{{ wifi_data.rssi }} dBm</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Latency</h2>
+
+            <p>{{ latency }} ms</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Security</h2>
+
+            <p>{{ wifi_data.security }}</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Channel</h2>
+
+            <p>{{ wifi_data.channel }}</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>RSSI Variance</h2>
+
+            <p>{{ rssi_variance }}</p>
+
+        </div>
+
+        <div class="card risk-card">
+
+            <h2>Risk Score</h2>
+
+            <p>{{ risk }}%</p>
+
+        </div>
+
+        <div class="card status-card">
+
+            <h2>Status</h2>
+
+            <p>{{ status }}</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
